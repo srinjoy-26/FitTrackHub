@@ -1,27 +1,23 @@
-import Navbar from "./components/Navbar"
-import './App.css'
-import Footer from "./components/Footer"
+import Navbar from "./components/Navbar";
+import "./App.css";
+import Footer from "./components/Footer";
 
-import Hero from "./components/Hero"
+import Hero from "./components/Hero";
 
-import CardDiv from "./components/Cards/CardDiv"
-
+import CardDiv from "./components/Cards/CardDiv";
 
 export default function App() {
   return (
     <>
-    <Navbar/>
+      <div>
+        <Navbar />
 
-    <Hero />
-     <Footer/> 
+        <Hero />
 
-
-    <CardDiv/>
-    <CardDiv/>
-    <Footer/>
-    
-
-   
+        <CardDiv />
+        <CardDiv />
+        <Footer />
+      </div>
     </>
-  )
+  );
 }

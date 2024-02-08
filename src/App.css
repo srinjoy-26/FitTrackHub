@@ -10,3 +10,21 @@
   background-position: center;
 }
 
+#hero-div{
+  background-image: url(./assets/bg-image.avif);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+#hero-div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+

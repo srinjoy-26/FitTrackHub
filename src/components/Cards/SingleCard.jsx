@@ -6,11 +6,12 @@ import {
   CardMedia,
   Grid,
 } from "@mui/material";
-import * as React from "react";
+import { red } from "@mui/material/colors";
+
 
 function SingleCard() {
   return (
-    <Card sx={{ maxWidth: 300, backgroundColor: "black", padding:'10px'}} >
+    <Card sx={{ maxWidth: 300, backgroundColor:'black', padding:'10px'}} className="mx-auto bg-red-500" id="card" >
       <CardMedia image="/src/assets/exercise.jpg" sx={{ height: 100 }} />
       <CardContent sx={{ color: "white" }}>
         <h2>Exercise name</h2>

@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-gradient-to-r from-black from-5% to-red-400 flex justify-between px-4 items-center py-3 gap-6 sm:justify-around sm:px-0">
+      <div className="bg-black flex justify-between px-4 items-center py-3 gap-6 sm:justify-around sm:px-0 ">
         <div id="logo" className="h-16 w-16"></div>
 
         <div id="items">
@@ -25,7 +25,7 @@ const Navbar = () => {
               );
             })}
             <TfiMenu
-              className="text-black text-xl cursor-pointer sm:hidden "
+              className="text-white text-xl cursor-pointer sm:hidden "
               onClick={() => setstate(false)}
             ></TfiMenu>
           </ul>
@@ -35,7 +35,7 @@ const Navbar = () => {
       {/* sidebar */}
 
       <div
-        className={`bg-gradient-to-r from-black from-5% to-red-400 py-4 px-4 flex justify-between ${
+        className={`bg-black py-4 px-4 flex justify-between ${
           nvstate && "hidden"
         } sm:hidden`}
       >
@@ -54,7 +54,7 @@ const Navbar = () => {
           </ul>
         </div>
         <RxCross1
-          className="text-black text-xl cursor-pointer"
+          className="text-white text-xl cursor-pointer"
           onClick={() => setstate(true)}
         ></RxCross1>
       </div>
