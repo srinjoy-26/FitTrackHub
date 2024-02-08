@@ -15,7 +15,7 @@ export default function App() {
         <Hero />
 
         <CardDiv />
-        <CardDiv />
+        
         <Footer />
       </div>
     </>

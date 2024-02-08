@@ -9,20 +9,19 @@ import {
 import { red } from "@mui/material/colors";
 
 
-function SingleCard() {
+function SingleCard({item}) {
   return (
     <Card sx={{ maxWidth: 300, backgroundColor:'black', padding:'10px'}} className="mx-auto bg-red-500" id="card" >
-      <CardMedia image="/src/assets/exercise.jpg" sx={{ height: 100 }} />
+      <CardMedia image={item.src} sx={{ height: 150 }} />
       <CardContent sx={{ color: "white" }}>
-        <h2>Exercise name</h2>
+        <h2>{item.name}</h2>
         <p style={{ color: "gray" }}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui dicta
-          minus molestiae vel beatae natus eveniet.
+          {item.description}
         </p>
       </CardContent>
       <CardActions>
         <Grid container justifyContent="center">
-          <Button size="small" variant="contained" color="success">
+          <Button size="small" variant="contained" color="primary">
             Know more
           </Button>
         </Grid>

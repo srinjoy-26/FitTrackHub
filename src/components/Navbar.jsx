@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-black flex justify-between px-4 items-center py-3 gap-6 sm:justify-around sm:px-0 ">
+      <div className="bg-black flex justify-between px-4 items-center py-3 gap-6 sm:justify-around sm:px-0 " id="nv">
         <div id="logo" className="h-16 w-16"></div>
 
         <div id="items">
@@ -18,7 +18,7 @@ const Navbar = () => {
               return (
                 <li
                   key={index}
-                  className="text-lg font-semibold p-1 cursor-pointer text-white hidden sm:flex hover:text-purple-400"
+                  className="text-md  p-1 cursor-pointer text-white hidden sm:flex hover:text-purple-400"
                 >
                   {item}
                 </li>
@@ -34,7 +34,7 @@ const Navbar = () => {
 
       {/* sidebar */}
 
-      <div
+      <div id="side"
         className={`bg-black py-4 px-4 flex justify-between ${
           nvstate && "hidden"
         } sm:hidden`}
@@ -45,7 +45,7 @@ const Navbar = () => {
               return (
                 <li
                   key={index}
-                  className="text-lg font-semibold text-white p-1 rounded-sm cursor-pointer w-[50%] hover:text-purple-400"
+                  className="text-md  text-white p-1 rounded-sm cursor-pointer w-[50%] hover:text-purple-400"
                 >
                   {item}
                 </li>

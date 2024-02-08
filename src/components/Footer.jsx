@@ -6,7 +6,7 @@ const Footer = () => {
   let fooitem = ["Home", "About", "Contact", "Exercises"];
 
   return (
-    <div className="bg-black relative pb-0">
+    <div className="bg-black relative pb-0" id="footer">
       <div
         id="footer"
         className="bg-black flex flex-col  md:flex-row md:justify-around py-8 md:items-center"
