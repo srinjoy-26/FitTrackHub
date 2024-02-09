@@ -12,16 +12,16 @@ import { red } from "@mui/material/colors";
 function SingleCard({item}) {
   return (
     <Card sx={{ maxWidth: 300, backgroundColor:'black', padding:'10px'}} className="mx-auto bg-red-500" id="card" >
-      <CardMedia image={item.src} sx={{ height: 150 }} />
+      <CardMedia image={item.src} sx={{ height: 170 }} />
       <CardContent sx={{ color: "white" }}>
-        <h2>{item.name}</h2>
-        <p style={{ color: "gray" }}>
+        <h2 className="text-lg font-semibold">{item.name}</h2>
+        <p className="text-slate-300">
           {item.description}
         </p>
       </CardContent>
       <CardActions>
         <Grid container justifyContent="center">
-          <Button size="small" variant="contained" color="primary">
+          <Button size="small" variant="contained">
             Know more
           </Button>
         </Grid>

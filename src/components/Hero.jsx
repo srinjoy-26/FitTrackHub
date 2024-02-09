@@ -15,8 +15,8 @@ export default function Hero() {
             </div>
 
             <div className="flex gap-12 justify-center  mt-10 ">
-                <button className=" rounded-full text-white font-semibold bg-blue-600 py-3 px-3 text-sm cursor-pointer z-10 transition-all duration-500 hover:scale-110">Subscribe</button>
-                <button className=" rounded-full text-white font-semibold bg-blue-600 p-2 px-3 text-sm cursor-pointer z-10 transition-all duration-500 hover:scale-110">Learn More</button>
+                <button className=" rounded-full text-white font-semibold bg-blue-600 py-3 px-4 text-sm cursor-pointer z-10 transition-all duration-500 hover:scale-110">Subscribe</button>
+                <button className=" rounded-full text-white font-semibold bg-blue-600 p-2 px-4 text-sm cursor-pointer z-10 transition-all duration-500 hover:scale-110">Learn More</button>
             </div>
             </div>
         </div>
