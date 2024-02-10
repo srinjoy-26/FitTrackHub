@@ -3,7 +3,7 @@ import { Grid } from "@mui/material";
 import SingleCard from "./SingleCard";
  import exercise from "../../Exercise";
 
-function CardDiv() {
+function Exercises() {
   
   return (
     <>
@@ -22,4 +22,4 @@ function CardDiv() {
   );
 }
 
-export default CardDiv;
+export default Exercises;

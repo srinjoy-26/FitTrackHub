@@ -1,23 +1,21 @@
+
+// import "./App.css";
 import Navbar from "./components/Navbar";
-import "./App.css";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 
-import Hero from "./components/Hero";
+// import Hero from "./components/Hero";
 
-import CardDiv from "./components/Cards/CardDiv";
+// import Exercises from "./components/Cards/Exercises";
+
+import Home from "./Pages/Home";
 
 export default function App() {
   return (
     <>
-      <div>
-        <Navbar />
-
-        <Hero />
-
-        <CardDiv />
-        
-        <Footer />
-      </div>
+    <Navbar/>
+     <Home/> 
+      
+      
     </>
   );
 }
