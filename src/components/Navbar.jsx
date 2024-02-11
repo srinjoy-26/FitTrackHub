@@ -4,8 +4,8 @@ import { useState } from "react";
 import { FiLogIn } from "react-icons/fi";
 import { FaUser } from "react-icons/fa";
 import { BrowserRouter as Router , Routes , Route , Link } from "react-router-dom";
-import Exercises from "./Cards/Exercises";
-import Home from "../Pages/Home";
+// import Exercises from "./Cards/Exercises";
+// import Home from "../Pages/Home";
 
 const Navbar = () => {
   let [nvstate, setstate] = useState(true);
@@ -57,10 +57,10 @@ const Navbar = () => {
         </div>
       </div>
 
-      <Routes>
+      {/* <Routes>
                   
               <Route path = "/exercises" element = {<Exercises/>}/> 
-      </Routes>
+      </Routes> */}
 
     </Router>
 
@@ -107,10 +107,10 @@ const Navbar = () => {
         ></RxCross1>
       </div>
         
-      <Routes>
+      {/* <Routes>
       
               <Route path = "/exercises" element = {<Exercises/>}/> 
-      </Routes>
+      </Routes> */}
 
       </Router>
     </>
