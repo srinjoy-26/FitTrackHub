@@ -17,9 +17,9 @@ const Navbar = () => {
 
      <Router>
       
-      <div className="bg-black flex justify-between px-4 items-center py-3 gap-6 sm:justify-around sm:px-0 " id="nv">
+      <div className="bg-black flex justify-between items-center py-6 px-4 gap-8 sm:justify-around sm:px-0 " id="nv">
 
-        <div id="logo" className="h-16 w-16"></div>
+        <div id="logo" className="h-10 w-10"></div>
       
       
         <div id="items">
@@ -45,12 +45,12 @@ const Navbar = () => {
         </div>
       
       <div id="login-signup" className=" hidden sm:flex gap-3">
-        <div id="button" className="flex gap-2 bg-blue-500 p-2 rounded-md items-center text-white font-thin hover:bg-blue-900 cursor-pointer">
+        <div id="button" className="flex gap-2 bg-blue-500 p-2 h-10 w-full rounded-md items-center text-white font-thin hover:bg-blue-900 cursor-pointer">
               <FiLogIn/>
               <p >Login</p>
              </div>
 
-             <div id="sign-up" className="flex gap-2 bg-blue-500 p-2 rounded-md items-center text-white font-thin hover:bg-blue-900 cursor-pointer">
+             <div id="sign-up" className="flex gap-2 bg-blue-500 h-10 w-full p-2 rounded-md items-center text-white font-thin hover:bg-blue-900 cursor-pointer">
               <FaUser />
               <p>Signup</p>
              </div>
