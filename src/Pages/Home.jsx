@@ -12,6 +12,7 @@ const Home = () =>{
   <Hero/>
   <Exercises/>
   <Footer/>
+  
   </>
   )
   

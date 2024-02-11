@@ -1,11 +1,10 @@
 import { TfiMenu } from "react-icons/tfi";
-import { RxCross1 } from "react-icons/rx";
+
 import { useState } from "react";
 import { FiLogIn } from "react-icons/fi";
 import { FaUser } from "react-icons/fa";
-import { BrowserRouter as Router , Routes , Route , Link } from "react-router-dom";
-// import Exercises from "./Cards/Exercises";
-// import Home from "../Pages/Home";
+ import { NavLink } from "react-router-dom";
+ 
 
 const Navbar = () => {
   let [nvstate, setstate] = useState(true);
@@ -14,24 +13,19 @@ const Navbar = () => {
 
   return (
     <>
+      <div className="bg-black flex justify-between items-center py-3 px-4 gap-8 sm:justify-around sm:px-0 " id="nv">
 
-     <Router>
-      
-      <div className="bg-black flex justify-between items-center py-6 px-4 gap-8 sm:justify-around sm:px-0 " id="nv">
-
-        <div id="logo" className="h-10 w-10"></div>
+        <div id="logo" className="h-14 w-14"></div>
       
       
         <div id="items">
           <ul className="flex gap-6">
             {nvitem.map((item, index) => {
               return (
-                <Link key={index} to={'/' + item.toLowerCase()}><li
-                  
-                  className="text-md  p-1 cursor-pointer text-white hidden sm:flex hover:text-purple-400"
-                >
+                <NavLink key={index} to={ item == 'Home' ? '/' :'/' + item.toLowerCase()}>
+                  <li className="text-md  p-1 cursor-pointer text-white hidden sm:flex hover:text-purple-400">
                   {item}
-                </li></Link>
+                </li></NavLink>
               );
             })}
 
@@ -39,7 +33,7 @@ const Navbar = () => {
 
             <TfiMenu
               className="text-white text-xl cursor-pointer sm:hidden "
-              onClick={() => setstate(false)}
+              onClick={() => setstate(!nvstate)}
             ></TfiMenu>
           </ul>
         </div>
@@ -57,34 +51,25 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* <Routes>
-                  
-              <Route path = "/exercises" element = {<Exercises/>}/> 
-      </Routes> */}
-
-    </Router>
-
-
-
+     
+{/* sidebar */}
   
-      {/* sidebar */}
-   <Router>
       <div id="side"
-        className={`bg-black py-4 px-4 flex justify-between ${
+        className={`bg-black py-4 px-4 ${
           nvstate && "hidden"
         } sm:hidden`}
       >
-        <div id="items" className="w-full">
+        <div id="resitems" className="w-full">
           <ul className="flex gap-6 flex-col w-full">
             {nvitem.map((item, index) => {
               return (
-                <Link key={index} to={ '/' + item.toLowerCase()}>
+                <NavLink key={index} to={item == 'Home' ? '/' :'/' + item.toLowerCase()}>
                 <li
                   
                   className="text-md  text-white p-1 rounded-sm cursor-pointer w-[50%] hover:text-purple-400"
                 >
                   {item}
-                </li></Link>
+                </li></NavLink>
               );
             })}
           </ul>
@@ -100,19 +85,14 @@ const Navbar = () => {
               <p>Signup</p>
              </div>
         </div>
+
         </div>
-        <RxCross1
-          className="text-white text-xl cursor-pointer"
-          onClick={() => setstate(true)}
-        ></RxCross1>
+       
       </div>
         
-      {/* <Routes>
       
-              <Route path = "/exercises" element = {<Exercises/>}/> 
-      </Routes> */}
 
-      </Router>
+     
     </>
   );
 };

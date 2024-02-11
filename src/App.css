@@ -38,3 +38,20 @@ font-family: 'Kanit', sans-serif;
 #paradiv{
   font-family: 'Kanit', sans-serif; 
 }
+
+ .App{
+  width: 100%;
+  height: 100%;
+}
+
+#nv{
+  position: sticky;
+  top: 0;
+  z-index: 11;
+} 
+
+#side{
+  position: sticky;
+  top: 0;
+  z-index: 11;
+}
