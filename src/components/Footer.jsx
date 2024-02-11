@@ -1,6 +1,7 @@
 import { FaFacebook } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   let fooitem = ["Home", "About", "Contact", "Exercises"];
@@ -25,12 +26,14 @@ const Footer = () => {
           <ul>
             {fooitem.map((x, index) => {
               return (
-                <li
+                <Link
+                  to={x == "Home" ? "/" : "/" + x.toLowerCase()}
                   key={index}
-                  className="text-slate-200 text-md mt-2 hover:text-white hover:font-semibold cursor-pointer"
                 >
-                  {x}
-                </li>
+                  <li className="text-slate-200 text-md mt-2 hover:text-white hover:font-semibold cursor-pointer">
+                    {x}{" "}
+                  </li>
+                </Link>
               );
             })}
           </ul>
