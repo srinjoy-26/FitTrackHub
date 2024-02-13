@@ -6,7 +6,8 @@ import {
   CardMedia,
   Grid,
 } from "@mui/material";
-import { red } from "@mui/material/colors";
+import { red } from "@mui/material/colors"
+import { Link } from "react-router-dom";
 
 
 function SingleCard({item}) {
@@ -22,7 +23,7 @@ function SingleCard({item}) {
       <CardActions>
         <Grid container justifyContent="center">
           <Button size="small" variant="contained" sx={{borderRadius: '20px'}}>
-            Know more
+             <Link to={"/legWorkout"}>Know more </Link>
           </Button>
         </Grid>
       </CardActions>
