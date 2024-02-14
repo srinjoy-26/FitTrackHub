@@ -1,4 +1,4 @@
-import * as React from "react";
+
 import styled from "styled-components";
 import about1Image from "../assets/about1.gif";
 import about2Image from "../assets/about2.png";
@@ -116,7 +116,7 @@ function About() {
         </Quote>
       </ContentContainer>
 
-      <div className="mt-6 flex flex-col gap-1 sm:flex-row ">
+      {/* <div className="mt-6 flex flex-col gap-1 sm:flex-row ">
         <input
           type="text"
           placeholder="Enter your email"
@@ -125,7 +125,7 @@ function About() {
         <button className="bg-blue-600 rounded-full p-2 text-sm text-white px-3">
           Subscribe
         </button>
-      </div>
+      </div> */}
     </AboutContiner>
   );
 }
