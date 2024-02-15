@@ -10,8 +10,9 @@ export default function Hero() {
             <div >
             <div className="relative text-center" id="paradiv" >
                 <h1 className="text-4xl leading-tight font-bold sm:text-5xl md:text-6xl text-black ">Your Fitness Journey Starts Here</h1>
-                <p className="mt-10 max-w-4xl font-bold font-2xl text-lg text-black sm:text-xl mx-auto">Embarking on a fitness journey is akin to sculpting a masterpiece, with the gym as our canvas and sweat as our paintbrush. Within those walls, we transcend limitations, pushing our bodies to new heights and unlocking the potential within. Each drop of perspiration is a testament to our dedication, each repetition a step closer to our aspirations. In the gym, we find camaraderie in shared struggles and triumphs, fostering a community bonded by a mutual pursuit of strength, endurance, and vitality. 
-                </p>
+                <p className="mt-10 max-w-4xl font-bold font-2xl text-lg text-black sm:text-xl mx-auto">
+                "Fitness is not about being better than someone else. It's about being better than you used to be."</p>
+                <p className="text-black text-lg font-semibold">- Khloe Kardashian</p>
             </div>
 
             <div className="flex gap-12 justify-center  mt-10 ">
