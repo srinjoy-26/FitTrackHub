@@ -11,7 +11,9 @@ function Workout() {
     const { name } = location.state || {}; 
 
     const [exercises, setExercises] = useState([]);
-
+    
+    let process = NodeJS.process
+    
   useEffect(() => {
     const fetchExercises = async () => {
       const options = {
@@ -19,7 +21,7 @@ function Workout() {
         url: `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${name}`,
         params: {limit: '5'},
         headers: {
-          'X-RapidAPI-Key': 'd09cd9ba7amsh74278a5d470d032p171516jsn0e1b5f3b4ae1',
+          'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
           'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
         }
       };
