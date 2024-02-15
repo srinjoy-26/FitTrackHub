@@ -1,6 +1,6 @@
 
 import Hero from "../components/Hero";
-import Exercises from "../components/Cards/Exercises";
+import Exercisehome from "../components/Exercisehome";
 
 import '../App.css'
 
@@ -10,7 +10,7 @@ const Home = () =>{
   <>
   
   <Hero/>
-  <Exercises/>
+  <Exercisehome/>
  
   
   </>

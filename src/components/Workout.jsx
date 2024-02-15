@@ -3,6 +3,8 @@ import WorkoutSingleCard from "./WorkoutSingleCard";
 import axios from "axios";
 import { useLocation } from 'react-router-dom';
 import { useState , useEffect } from "react";
+import { IoChevronBackCircleOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 function Workout() {
     const location = useLocation();
@@ -35,7 +37,11 @@ function Workout() {
 
     return(
     <div className="flex flex-col items-center px-3 py-2 gap-3  bg-black ">
-      <h1 className="text-white font-mono font-semibold text-3xl">{`${name} exercises`}</h1>
+      <div className="flex gap-2 justify-start w-[90%] px-1 items-center">
+      <Link to="/exercises"><IoChevronBackCircleOutline className="text-white text-3xl"></IoChevronBackCircleOutline></Link>
+      <h1 className="text-white font-mono font-semibold text-2xl sm:text-3xl">{`${name} exercises`}</h1>
+      </div>
+      
       <div className="flex flex-wrap gap-4 sm:gap-2">
         {exercises.map((exercise, index) => (
            <WorkoutSingleCard key={index} data={exercise}/>
