@@ -11,6 +11,8 @@ function Workout() {
     const { name } = location.state || {}; 
 
     const [exercises, setExercises] = useState([]);
+    
+    
 
   useEffect(() => {
     const fetchExercises = async () => {
