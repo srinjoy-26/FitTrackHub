@@ -5,9 +5,9 @@
 
 ![image](https://github.com/srinjoy-26/EnergiZeMe/assets/91176055/b1b3a813-5d35-42da-b0ed-b3b87d02cfde)
 
-![WhatsApp Image 2024-01-29 at 22 33 03_90ccb52e](https://github.com/ilhamansari/EnergiZeMe/assets/102286043/435e751a-3869-4c7c-b27b-5fa5a7cbf30c)
+![Screenshot (151)](https://github.com/ilhamansari/EnergiZeMe/assets/102286043/2e0aff89-d960-48b0-98d4-161da047fc7e)
 
-![WhatsApp Image 2024-01-29 at 22 32 30_f1ca0833](https://github.com/ilhamansari/EnergiZeMe/assets/102286043/0603a81e-f2af-45ab-92c3-888334f62804)
+![Screenshot (152)](https://github.com/ilhamansari/EnergiZeMe/assets/102286043/6be4791e-66bc-4efe-86fc-6a4623ce9029)
 
 
 
