@@ -22,7 +22,7 @@ const Navbar = () => {
           <ul className="flex gap-6">
             {nvitem.map((item, index) => {
               return (
-                <NavLink key={index} to={ item == 'Home' ? '/' :'/' + item.toLowerCase()}>
+                <NavLink key={index} to={`/${item.toLowerCase()}`}>
                   <li className="text-md  p-1 cursor-pointer text-white hidden sm:flex hover:text-purple-400">
                   {item}
                 </li></NavLink>
@@ -63,7 +63,7 @@ const Navbar = () => {
           <ul className="flex gap-6 flex-col w-full">
             {nvitem.map((item, index) => {
               return (
-                <NavLink key={index} to={item == 'Home' ? '/' :'/' + item.toLowerCase()}>
+                <NavLink key={index} to={`/${item.toLowerCase()}`}>
                 <li
                   
                   className="text-md  text-white p-1 rounded-sm cursor-pointer w-[50%] hover:text-purple-400"

@@ -76,7 +76,7 @@ function Contact() {
   };
 
   return (
-    <div style={{backgroundColor: 'black'}}>
+    <div style={{backgroundColor: 'black'}} className="py-3">
       <FormContainer>
         <p
           style={{

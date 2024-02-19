@@ -27,7 +27,7 @@ const Footer = () => {
             {fooitem.map((x, index) => {
               return (
                 <Link
-                  to={x == "Home" ? "/" : "/" + x.toLowerCase()}
+                  to={`/${x.toLowerCase()}`}
                   key={index}
                 >
                   <li className="text-slate-200 text-md mt-2 hover:text-white hover:font-semibold cursor-pointer">
