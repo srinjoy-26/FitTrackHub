@@ -6,12 +6,8 @@ import Signup from './Signup'
 import Login from './Login'
 
 
-export {About}
-export {Contact}
-export {Exercisepage}
-export {Home}
-export {Signup}
-export {Login}
+export {About , Contact , Exercisepage , Home , Signup , Login}
+
 
 
  

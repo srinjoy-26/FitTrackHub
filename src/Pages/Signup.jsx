@@ -1,7 +1,7 @@
 import { FaEyeSlash } from "react-icons/fa6";
 import {account} from '../lib/appwrite'
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate , Link} from "react-router-dom";
 
 const SignUp = () =>{
   let [isTrue , isTrueup] = useState(true)
@@ -61,7 +61,7 @@ const SignUp = () =>{
         <button className="border border-blue-500 bg-blue-500 block py-1 rounded-md text-white" type="submit" >Sign up</button>
        
 
-        <p className="text-blue-400 text-[12px] ">Already have an account? <span className="font-semibold">Login</span></p>
+        <p className="text-blue-400 text-[12px] ">Already have an account? <Link to='/login'><span className="font-semibold">Login</span></Link></p>
       </form>
     </div>
   )
