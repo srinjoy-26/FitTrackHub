@@ -5,7 +5,9 @@
 
 ![image](https://github.com/srinjoy-26/EnergiZeMe/assets/91176055/b1b3a813-5d35-42da-b0ed-b3b87d02cfde)
 
+![Screenshot (151)](https://github.com/ilhamansari/EnergiZeMe/assets/102286043/6aa4eacd-5955-4e43-ac82-ed79ba5253c0)
 
+![Screenshot (152)](https://github.com/ilhamansari/EnergiZeMe/assets/102286043/57c8dff6-e0b8-4821-aa54-173997d52fae)
 
 
 
