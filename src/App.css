@@ -55,3 +55,15 @@ font-family: 'Kanit', sans-serif;
   top: 0;
   z-index: 11;
 }
+
+.loading{
+  background-image: url(./assets/loader.gif);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 90%;
+}
+
+.loader{
+  font-family:'Kanit', sans-serif; 
+}

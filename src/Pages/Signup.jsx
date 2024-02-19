@@ -29,7 +29,7 @@ const SignUp = () =>{
    try{
     var x = await account.create('unique()' , email , password , name)
     console.log(x)
-    Navigate('/home')
+    
    }catch(e){
     console.log(e)
    }
@@ -40,18 +40,18 @@ const SignUp = () =>{
 
          <div id="logo" className="absolute w-16 h-16 top-1 left-1"></div>
 
-         <form className="bg-transparent border-2 border-red-400 flex flex-col text-center rounded-lg py-5 px-10 gap-4" onSubmit={handleSubmit}>
+         <form className="bg-transparent border-2 border-red-400 flex flex-col text-center rounded-lg py-5 px-10 gap-4 w-[20rem] sm:w-[22rem]" onSubmit={handleSubmit}>
 
         <span className="text-4xl text-red-500 font-bold font-mono">EnergizeMe</span>
         <span className="text-blue-400 text-[18px]">SignUp</span>
 
         
-          <input type="text" placeholder="enter name" className="block  py-2 w-[14rem] sm:w-[16.8rem] placeholder:text-sm px-2  rounded-md focus:outline-none bg-slate-700 text-white"  onChange={(e)=>{setname(e.target.value)}}/>
+          <input type="text" placeholder="enter username" className="block  py-2 w-full placeholder:text-sm px-2  rounded-md focus:outline-none bg-slate-700 text-white"  onChange={(e)=>{setname(e.target.value)}}/>
 
           <input type="email" placeholder="enter email"
-          className="block  py-2 placeholder:text-sm px-2 shadow-md rounded-md focus:outline-none bg-slate-700 text-white" onChange={(e)=>{setemail(e.target.value)}}/>
+          className="block  py-2 placeholder:text-sm px-2 shadow-md rounded-md focus:outline-none bg-slate-700 text-white w-full" onChange={(e)=>{setemail(e.target.value)}}/>
 
-         <div className="flex items-center  shadow-md bg-slate-700 rounded-md">
+         <div className="flex items-center  shadow-md bg-slate-700 rounded-md w-full">
           <input  type={inptype} placeholder="enter password"
           className="block  py-2 placeholder:text-sm px-2 focus:outline-none rounded-md bg-slate-700 text-slate-300" 
           onChange={(event) => {event.target.value == ''? isTrueup(true) : isTrueup(false) ; setpassword(event.target.value)} }/>

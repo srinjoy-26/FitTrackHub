@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 import { useState , useEffect } from "react";
 import { IoChevronBackCircleOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import Loader from './Loader';
 
 function Workout() {
     const location = useLocation();
@@ -21,7 +22,7 @@ function Workout() {
         url: `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${name}`,
         params: {limit: '5'},
         headers: {
-          'X-RapidAPI-Key': 'd09cd9ba7amsh74278a5d470d032p171516jsn0e1b5f3b4ae1',
+          'X-RapidAPI-Key': '',
           'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
         }
       };
@@ -43,12 +44,14 @@ function Workout() {
       <Link to="/exercises"><IoChevronBackCircleOutline className="text-white text-3xl"></IoChevronBackCircleOutline></Link>
       <h1 className="text-white font-mono font-semibold text-2xl sm:text-3xl">{`${name} exercises`}</h1>
       </div>
-      
+      {
+      exercises == '' ? <Loader/> :
       <div className="flex flex-wrap gap-4 sm:gap-2">
         {exercises.map((exercise, index) => (
            <WorkoutSingleCard key={index} data={exercise}/>
         ))}
       </div>
+      }
     </div>
     )
 }

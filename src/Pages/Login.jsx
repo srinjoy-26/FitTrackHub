@@ -3,6 +3,7 @@ import {account} from '../lib/appwrite'
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Loader from "../components/Loader";
 
 
 const Login = () =>{
@@ -10,6 +11,7 @@ const Login = () =>{
   let [inptype , setinptype] = useState('password')
   let [email , setemail] = useState('')
   let [password , setpassword] = useState('')
+  let [showloader , setloader] = useState(false)
 
   const Navigate = useNavigate()
 
@@ -28,9 +30,12 @@ const Login = () =>{
 
   const login = async() =>{
     try{
+      setloader(true)
       var x = await account.createEmailSession(email,password);
       Navigate('/home')
+      
     }catch(e){
+      setloader(false)
       alert('Invalid credentials')
     }
     
@@ -38,17 +43,19 @@ const Login = () =>{
 
   return(
     <div className="login bg-black h-screen flex justify-center items-center px-5 relative" >
+       { 
+         showloader ? <Loader/> : 
+         <>
+         <div id="logo" className="absolute w-16 h-16 top-1 left-1 "></div>
 
-         <div id="logo" className="absolute w-16 h-16 top-1 left-1"></div>
-
-         <form className="bg-transparent border-2 border-red-400 flex flex-col text-center rounded-lg py-5 px-10 gap-4" onSubmit={handleLogin}>
+         <form className="bg-transparent border-2 border-red-400 flex flex-col text-center rounded-lg py-5 px-10 gap-4 w-[20rem] sm:w-[22rem]" onSubmit={handleLogin}>
         <span className="text-4xl text-red-500 font-bold font-mono">EnergizeMe</span>
         <span className="text-blue-400 text-[18px]">Login</span>
 
         <input type="email" placeholder="enter email"
-          className="block  py-2 placeholder:text-sm px-2 shadow-md rounded-md focus:outline-none bg-slate-700 text-white w-[14rem] sm:w-[16.8rem] " onChange={(e) => {setemail(e.target.value)}}/>
+          className="block  py-2 placeholder:text-sm px-2 shadow-md rounded-md focus:outline-none bg-slate-700 text-white w-full" onChange={(e) => {setemail(e.target.value)}}/>
 
-         <div className="flex items-center  shadow-md bg-slate-700 rounded-md">
+         <div className="flex items-center  shadow-md bg-slate-700 rounded-md w-full">
           <input  type={inptype} placeholder="enter password"
           className="block  py-2 placeholder:text-sm px-2 focus:outline-none rounded-md bg-slate-700 text-slate-300" 
           onChange={(event) => {event.target.value == ''? isTrueup(true) : isTrueup(false) ; setpassword(event.target.value)}}/>
@@ -60,6 +67,9 @@ const Login = () =>{
 
         <p className="text-blue-400 text-[12px] ">Don't have an account? <Link to='/signup'><span className="font-semibold">Signup</span></Link></p>
       </form>
+      </>
+     }
+      
     </div>
   )
 }
