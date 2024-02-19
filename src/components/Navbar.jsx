@@ -103,11 +103,19 @@ const Navbar = () => {
             })}
           </ul>
 
-          <div id="login-signup" className="flex flex-col gap-2 mt-4">
-        <div id="button" className="flex gap-2 bg-blue-500 p-2 rounded-md items-center text-white font-thin justify-center  hover:bg-blue-900">
+          <div id="login-signup" className="flex flex-col gap-3 mt-4">
+        <div id="button" className="flex gap-2 bg-blue-500 p-2 rounded-md items-center text-white font-thin justify-center  hover:bg-blue-900 cursor-pointer" onClick={Logout}>
               <FiLogIn/>
               <p >Logout</p>
              </div>
+          
+
+          <div className="flex gap-2 items-center">
+          <TbFaceId className="text-white text-4xl"/>
+              {name ? <p className="text-white text-md">Hi {name}</p> : <p className="text-white text-md">Loading.....</p>}
+          </div>
+             
+             
 
              {/* <div id="sign-up" className="flex gap-2 bg-blue-500 p-2 rounded-md items-center text-white font-thin justify-center  hover:bg-blue-900">
               <FaUser />
