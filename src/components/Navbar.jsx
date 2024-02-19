@@ -1,15 +1,42 @@
 import { TfiMenu } from "react-icons/tfi";
 
-import { useState } from "react";
+import { useState , useEffect} from "react";
 import { FiLogIn } from "react-icons/fi";
 import { FaUser } from "react-icons/fa";
- import { NavLink } from "react-router-dom";
+ import { NavLink , useNavigate } from "react-router-dom";
+ import { TbFaceId } from "react-icons/tb";
+ import { account } from '../lib/appwrite';
  
 
 const Navbar = () => {
   let [nvstate, setstate] = useState(true);
+  let [name , setName] = useState('')
 
   let nvitem = ["Home", "About", "Contact", "Exercises"];
+  let Navigate = useNavigate()
+  
+  useEffect(()=>{
+    isLogin();
+  }, [])
+
+  const isLogin = async() =>{
+    try{
+      var x = await account.get('current')
+      setName(x.name)
+    }catch(e){
+      Navigate('/')
+    }
+  }
+
+  const Logout = async() => {
+    try{
+      var x = await account.deleteSession('current')
+      Navigate('/')
+    }catch(e){
+      console.log(e)
+    }
+  }
+
 
   return (
     <>
@@ -38,16 +65,18 @@ const Navbar = () => {
           </ul>
         </div>
       
-      <div id="login-signup" className=" hidden sm:flex gap-3">
-        <div id="button" className="flex gap-2 bg-blue-500 p-2 h-10 w-full rounded-md items-center text-white font-thin hover:bg-blue-900 cursor-pointer">
+      <div id="login-signup" className=" hidden sm:flex gap-3 items-center">
+        <div id="button" className="flex gap-2 bg-blue-500 p-2 h-10 w-[40%] rounded-md items-center text-white font-thin hover:bg-blue-900 cursor-pointer" onClick={Logout}>
               <FiLogIn/>
-              <p >Login</p>
+              <p >Logout</p>
              </div>
-
-             <div id="sign-up" className="flex gap-2 bg-blue-500 h-10 w-full p-2 rounded-md items-center text-white font-thin hover:bg-blue-900 cursor-pointer">
+              
+              <TbFaceId className="text-white text-4xl"/>
+              {name ? <p className="text-white text-md">Hi {name}</p> : <p className="text-white text-md">Loading.....</p>}
+             {/* <div id="sign-up" className="flex gap-2 bg-blue-500 h-10 w-full p-2 rounded-md items-center text-white font-thin hover:bg-blue-900 cursor-pointer">
               <FaUser />
               <p>Signup</p>
-             </div>
+             </div> */}
         </div>
       </div>
 
@@ -77,13 +106,13 @@ const Navbar = () => {
           <div id="login-signup" className="flex flex-col gap-2 mt-4">
         <div id="button" className="flex gap-2 bg-blue-500 p-2 rounded-md items-center text-white font-thin justify-center  hover:bg-blue-900">
               <FiLogIn/>
-              <p >Login</p>
+              <p >Logout</p>
              </div>
 
-             <div id="sign-up" className="flex gap-2 bg-blue-500 p-2 rounded-md items-center text-white font-thin justify-center  hover:bg-blue-900">
+             {/* <div id="sign-up" className="flex gap-2 bg-blue-500 p-2 rounded-md items-center text-white font-thin justify-center  hover:bg-blue-900">
               <FaUser />
               <p>Signup</p>
-             </div>
+             </div> */}
         </div>
 
         </div>
