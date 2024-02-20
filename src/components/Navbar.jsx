@@ -24,14 +24,14 @@ const Navbar = () => {
       var x = await account.get('current')
       setName(x.name)
     }catch(e){
-      Navigate('/')
+      Navigate('/login')
     }
   }
 
   const Logout = async() => {
     try{
       var x = await account.deleteSession('current')
-      Navigate('/')
+      Navigate('/login')
     }catch(e){
       console.log(e)
     }

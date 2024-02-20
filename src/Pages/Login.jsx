@@ -65,7 +65,7 @@ const Login = () =>{
         <button className="border border-blue-500 bg-blue-500 block py-1 rounded-md text-white"  type="submit">Login</button>
        
 
-        <p className="text-blue-400 text-[12px] ">Don't have an account? <Link to='/signup'><span className="font-semibold">Signup</span></Link></p>
+        <p className="text-blue-400 text-[12px] ">Don't have an account? <Link to='/'><span className="font-semibold">Signup</span></Link></p>
       </form>
       </>
      }
