@@ -15,10 +15,10 @@ export default function Hero() {
                 <p className="text-black text-lg font-semibold">- Khloe Kardashian</p>
             </div>
 
-            <div className="flex gap-12 justify-center  mt-10 ">
+            {/* <div className="flex gap-12 justify-center  mt-10 ">
                 <button className=" rounded-full text-white font-semibold bg-blue-600 py-3 px-4 text-sm cursor-pointer z-10 transition-all duration-500 hover:scale-110">Subscribe</button>
                 <button className=" rounded-full text-white font-semibold bg-blue-600 p-2 px-4 text-sm cursor-pointer z-10 transition-all duration-500 hover:scale-110">Learn More</button>
-            </div>
+            </div> */}
             </div>
         </div>
     )

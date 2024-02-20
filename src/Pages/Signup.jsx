@@ -2,6 +2,8 @@ import { FaEyeSlash } from "react-icons/fa6";
 import {account} from '../lib/appwrite'
 import { useState } from "react";
 import { useNavigate , Link} from "react-router-dom";
+import Loader from "../components/Loader";
+
 
 const SignUp = () =>{
   let [isTrue , isTrueup] = useState(true)
@@ -9,6 +11,7 @@ const SignUp = () =>{
   let [name , setname] = useState('')
   let [email , setemail] = useState('')
   let [password , setpassword] = useState('')
+  let [showloader , setloader] = useState(false)
 
   const Navigate = useNavigate()
 
@@ -27,9 +30,9 @@ const SignUp = () =>{
 
   const Signup = async() =>{
    try{
+    setloader(true)
     var x = await account.create('unique()' , email , password , name)
-    console.log(x)
-    
+    Navigate('/home')
    }catch(e){
     console.log(e)
    }
@@ -38,6 +41,9 @@ const SignUp = () =>{
   return(
     <div className="SignUp bg-black h-screen flex justify-center items-center px-5 relative" >
 
+    { 
+       showloader ? <Loader/> : 
+         <>
          <div id="logo" className="absolute w-16 h-16 top-1 left-1"></div>
 
          <form className="bg-transparent border-2 border-red-400 flex flex-col text-center rounded-lg py-5 px-10 gap-4 w-[20rem] sm:w-[22rem]" onSubmit={handleSubmit}>
@@ -63,6 +69,7 @@ const SignUp = () =>{
 
         <p className="text-blue-400 text-[12px] ">Already have an account? <Link to='/'><span className="font-semibold">Login</span></Link></p>
       </form>
+      </>}
     </div>
   )
 }
