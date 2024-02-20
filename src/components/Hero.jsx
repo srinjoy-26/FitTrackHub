@@ -1,5 +1,4 @@
-// import image from "../assets/bg-image.avif"
-import builder from "../assets/builder.jpg"
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -17,7 +16,7 @@ export default function Hero() {
         </p>
 
         <button className="bg-gradient-to-r from-green-400 to-blue-500 rounded-full lg:w-36 p-2 lg:p-3 text-white tracking-widest hover:shadow-lg  hover:shadow-blue-500 w-full">
-          JOIN US NOW
+         <Link to='/exercises'>LEARN MORE</Link> 
         </button>
       </div>
 

@@ -2,7 +2,7 @@ import { TfiMenu } from "react-icons/tfi";
 
 import { useState , useEffect} from "react";
 import { FiLogIn } from "react-icons/fi";
-import { FaUser } from "react-icons/fa";
+
  import { NavLink , useNavigate } from "react-router-dom";
  import { TbFaceId } from "react-icons/tb";
  import { account } from '../lib/appwrite';
@@ -12,7 +12,7 @@ const Navbar = () => {
   let [nvstate, setstate] = useState(true);
   let [name , setName] = useState('')
 
-  let nvitem = ["Home", "About", "Contact", "Exercises"];
+  let nvitem = ["Home", "About", "Contact", "Exercises", "Diet"];
   let Navigate = useNavigate()
   
   useEffect(()=>{

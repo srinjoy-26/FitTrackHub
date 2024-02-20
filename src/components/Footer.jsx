@@ -4,7 +4,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  let fooitem = ["Home", "About", "Contact", "Exercises"];
+  let fooitem = ["Home", "About", "Contact", "Exercises",'Diet'];
 
   return (
     <div className="bg-black relative pb-0" id="footer">
