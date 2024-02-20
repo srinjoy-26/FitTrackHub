@@ -57,7 +57,7 @@ const Login = () =>{
 
          <div className="flex items-center  shadow-md bg-slate-700 rounded-md w-full">
           <input  type={inptype} placeholder="enter password"
-          className="block  py-2 placeholder:text-sm px-2 focus:outline-none rounded-md bg-slate-700 text-slate-300" 
+          className="block  py-2 placeholder:text-sm px-2 focus:outline-none rounded-md bg-slate-700 text-slate-300 w-[70%]" 
           onChange={(event) => {event.target.value == ''? isTrueup(true) : isTrueup(false) ; setpassword(event.target.value)}}/>
           <FaEyeSlash className= {`text-blue-400 text-xl mx-auto ${isTrue && 'hidden'}`} onClick={togfun}/>
          </div>
