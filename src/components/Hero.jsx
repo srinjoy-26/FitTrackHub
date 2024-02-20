@@ -1,26 +1,34 @@
-
 // import image from "../assets/bg-image.avif"
+import builder from "../assets/builder.jpg"
 
 export default function Hero() {
+  return (
+    <div className="flex flex-col lg:flex-row bg-gradient-to-t from-red-500 to bg-black">
+      {/* left section div image*/}
+      <div className="flex flex-col justify-center max-w-[30rem] pl-8 text-white mx-4 lg:mx-0 lg:m-40 space-y-8">
+        <h1 className="text-3xl lg:text-5xl tracking-widest inline">
+          ENERGIZE ME <span className="">.</span>
+        </h1>
 
-    return(
-        <div id="hero-div" className="p-4 pb-6">
-            
-        {/* <img src={image} className="w-full opacity-60 absolute  z-1"/> */}
-            <div >
-            <div className="relative text-center" id="paradiv" >
-                <h1 className="text-4xl leading-tight font-bold sm:text-5xl md:text-6xl text-black ">Your Fitness Journey Starts Here</h1>
-                <p className="mt-10 max-w-4xl font-bold font-2xl text-lg text-black sm:text-xl mx-auto">
-                "Fitness is not about being better than someone else. It's about being better than you used to be."</p>
-                <p className="text-black text-lg font-semibold">- Khloe Kardashian</p>
-            </div>
+        <h2 className="text-xl lg:text-2xl tracking-widest">NO PAIN NO GAIN</h2>
 
-            {/* <div className="flex gap-12 justify-center  mt-10 ">
-                <button className=" rounded-full text-white font-semibold bg-blue-600 py-3 px-4 text-sm cursor-pointer z-10 transition-all duration-500 hover:scale-110">Subscribe</button>
-                <button className=" rounded-full text-white font-semibold bg-blue-600 p-2 px-4 text-sm cursor-pointer z-10 transition-all duration-500 hover:scale-110">Learn More</button>
-            </div> */}
-            </div>
-        </div>
-    )
+        <p className="text-sm lg:text-base">
+          Welcome to our gym – your fitness destination! With top-notch
+          equipment and expert trainers, we're here to help you crush your
+          goals. Join our supportive community today and start your journey to a
+          healthier, stronger you!
+        </p>
+
+        <button className="bg-gradient-to-r from-green-400 to-blue-500 rounded-full lg:w-36 p-2 lg:p-3 text-white tracking-widest hover:from-pink-500 hover:to-yellow-500 w-full">
+          JOIN US NOW
+        </button>
+      </div>
+
+      {/* right section div image*/}
+
+      <div className="mx-auto mt-6 mb-6 lg:mt-0 lg:mb-0">
+        <img src={builder} className="h-[20rem] lg:h-[40rem]"></img>
+      </div>
+    </div>
+  );
 }
-

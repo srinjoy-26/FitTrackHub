@@ -11,7 +11,7 @@ const Home = () =>{
   <>
   
   <Hero/>
-  <Exercisehome/>
+  
  
   
   </>
