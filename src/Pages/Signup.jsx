@@ -46,7 +46,7 @@ const SignUp = () =>{
          <>
          <div id="logo" className="absolute w-16 h-16 top-1 left-1"></div>
 
-         <form className="bg-transparent border-2 border-red-400 flex flex-col text-center rounded-lg py-5 px-10 gap-4 w-[20rem] sm:w-[22rem]" onSubmit={handleSubmit}>
+         <form className="bg-transparent border-2 border-red-400 flex flex-col text-center rounded-lg py-5 px-8 gap-4 w-[20rem] sm:w-[22rem]" onSubmit={handleSubmit}>
 
         <span className="text-4xl text-red-500 font-bold font-mono">EnergizeMe</span>
         <span className="text-blue-400 text-[18px]">SignUp</span>
@@ -59,7 +59,7 @@ const SignUp = () =>{
 
          <div className="flex items-center  shadow-md bg-slate-700 rounded-md w-full">
           <input  type={inptype} placeholder="enter password"
-          className="block  py-2 placeholder:text-sm px-2 focus:outline-none rounded-md bg-slate-700 text-slate-300" 
+          className="block  py-2 placeholder:text-sm px-2 focus:outline-none rounded-md bg-slate-700 text-slate-300 w-[70%]" 
           onChange={(event) => {event.target.value == ''? isTrueup(true) : isTrueup(false) ; setpassword(event.target.value)} }/>
           <FaEyeSlash className= {`text-blue-400 text-xl mx-auto ${isTrue && 'hidden'}`} onClick={togfun}/>
          </div>
