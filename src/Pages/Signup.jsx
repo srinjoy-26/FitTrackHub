@@ -48,7 +48,7 @@ const SignUp = () =>{
 
          <form className="bg-transparent border-2 border-red-400 flex flex-col text-center rounded-lg py-5 px-8 gap-4 w-[20rem] sm:w-[22rem]" onSubmit={handleSubmit}>
 
-        <span className="text-4xl text-red-500 font-bold font-mono">EnergizeMe</span>
+        <span className="text-4xl text-red-500 font-bold font-mono">FitTrackHub</span>
         <span className="text-blue-400 text-[18px]">SignUp</span>
 
         

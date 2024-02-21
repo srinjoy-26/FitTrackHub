@@ -49,7 +49,7 @@ const Login = () =>{
          <div id="logo" className="absolute w-16 h-16 top-1 left-1 "></div>
 
          <form className="bg-transparent border-2 border-red-400 flex flex-col text-center rounded-lg py-5 px-8 gap-4 w-[20rem] sm:w-[22rem]" onSubmit={handleLogin}>
-        <span className="text-4xl text-red-500 font-bold font-mono">EnergizeMe</span>
+        <span className="text-4xl text-red-500 font-bold font-mono">FitTrackHub</span>
         <span className="text-blue-400 text-[18px]">Login</span>
 
         <input type="email" placeholder="enter email"

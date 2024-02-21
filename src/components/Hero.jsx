@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <div className=" flex flex-col justify-around items-center bg-gradient-to-t bg-black py-4  px-4 gap-5 md:h-[70vh] md:flex-row md:px-0 md:gap-1">
+    <div className=" flex flex-col justify-around items-center bg-gradient-to-t bg-black py-2 px-4 gap-5 h-screen md:flex-row md:px-0 md:gap-1">
       {/* left section div image*/}
       <div className="flex flex-col justify-center  gap-4  text-white">
         <h1 className="text-3xl lg:text-5xl tracking-widest inline">

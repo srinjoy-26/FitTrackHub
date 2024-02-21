@@ -15,7 +15,7 @@ const Footer = () => {
         <div className=" p-4 md:py-0">
           <div className="flex gap-1 items-center">
             <div id="logo" className="h-16 w-16"></div>
-            <span className="text-white">EnergiZeMe</span>
+            <span className="text-white">FitTrackHub</span>
           </div>
           <p className="text-slate-200 font-thin mt-2">
             Our goal is to help you get fit!

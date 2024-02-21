@@ -36,14 +36,14 @@ const About = () => {
       <style>{styles}</style>
       <div className="about-content">
         <h2>
-          <strong>EnergiZeMe 🏋🏽🔥💪🏼🎧</strong>
+          <strong>FitTrackHub 🏋🏽🔥💪🏼🎧</strong>
         </h2>
         <p>
           Welcome to our virtual gym! We are dedicated to providing you with the
           best online fitness experience.
         </p>
         <p>
-          At <em>EnergiZeMe</em>, we believe that everyone deserves access to
+          At <em>FitTrackHub</em>, we believe that everyone deserves access to
           personalized fitness solutions, regardless of their location or
           schedule. Our virtual gym platform is designed to empower individuals
           to achieve their fitness goals from the comfort of their own homes, at
@@ -79,14 +79,14 @@ const About = () => {
         </p>
         <p>
           Flexible Scheduling: Say goodbye to rigid gym schedules and crowded
-          workout spaces. With <em>EnergiZeMe</em>, you have the flexibility to
+          workout spaces. With <em>FitTrackHub</em>, you have the flexibility to
           exercise whenever and wherever it suits you best. Whether you prefer
           to sweat it out in the morning or unwind with an evening yoga session,
           the choice is yours.
         </p>
         <p style={{padding:'15px'}}>
           <strong>
-            At <em>EnergiZeMe</em>, your journey to a healthier, happier you
+            At <em>FitTrackHub</em>, your journey to a healthier, happier you
             begins today. Join us and discover the transformative power of
             virtual fitness!
           </strong>

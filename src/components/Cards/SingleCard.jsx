@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function SingleCard({ item }) {
      let[value , setValue] = useState(item)
   return (
-    <Card sx={{ maxWidth: 300,  padding: '10px', borderRadius: '5px' , transition: 'all 0.3s ease-in-out' , background: 'linear-gradient(#BF3131 , black )'}} className="mx-auto  hover:scale-110 hover:bg-slate-600 cursor-pointer" id="card" >
+    <Card sx={{ maxWidth: 300,  padding: '10px', borderRadius: '5px' , transition: 'all 0.3s ease-in-out' , background: 'black'}} className="mx-auto  hover:scale-105 cursor-pointer hover:shadow-lg hover:shadow-blue-500" id="card" >
 
       <CardMedia image={value.src} sx={{ height: 170 }} />
       <CardContent sx={{ color: "white" }}>
