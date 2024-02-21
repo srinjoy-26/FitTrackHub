@@ -1,4 +1,4 @@
-# EnergiZeMe
+# FitTrackHub
 ### A fitness-guide app having various exercises for strength training and cardio and more.... Its goal is to increase awareness among present youth towards taking care of their physical as well as mental fitness. Remember Health is wealth 😊.
 
 ![image](https://github.com/srinjoy-26/EnergiZeMe/assets/91176055/96233708-8154-41b9-9aff-c80f1a55a9b8)
