@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 export default function Hero() {
+  useEffect(()=>{
+    Aos.init({duration: 1000})
+  },[])
   return (
   <>
-    <div className=" flex flex-col justify-around items-center bg-gradient-to-t bg-black py-2 px-4 gap-5 h-screen md:flex-row md:px-0 md:gap-0">
+    <div className=" flex flex-col justify-around items-center bg-gradient-to-t bg-black py-2 px-4 gap-5 h-screen md:flex-row md:px-0 md:gap-0" >
       {/* left section div image*/}
-      <div className="flex flex-col justify-center  gap-8  text-white sm:w-[42%]">
+      <div className="flex flex-col justify-center  gap-8  text-white sm:w-[42%]" data-aos = "fade-right">
         <h1 className="text-3xl lg:text-5xl tracking-widest inline">
         FIT TRACK HUB <span className="">.</span>
         </h1>
@@ -25,7 +30,7 @@ export default function Hero() {
 
       {/* right section div image*/}
 
-      <div className="w-full h-[30rem] rounded-3xl shadow-xl shadow-red-400 sm:w-96" id="hero-img">
+      <div className="w-full h-[30rem] rounded-3xl shadow-xl shadow-red-400 sm:w-96" id="hero-img" data-aos = "fade-left">
        
       </div>
       

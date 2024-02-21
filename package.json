@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.15.7",
     "@vercel/speed-insights": "^1.0.10",
+    "aos": "^2.3.4",
     "appwrite": "^13.0.1",
     "axios": "^1.6.7",
     "mui": "^0.0.1",

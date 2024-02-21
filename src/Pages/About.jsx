@@ -1,7 +1,12 @@
-import * as React from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const About = () => {
 
+  useEffect(()=>{
+    Aos.init({duration: 1000})
+  },[])
 
   const styles = `
       .about-page {
@@ -42,7 +47,7 @@ const About = () => {
           Welcome to our virtual gym! We are dedicated to providing you with the
           best online fitness experience.
         </p>
-        <p>
+        <p data-aos = "fade-right">
           At <em>FitTrackHub</em>, we believe that everyone deserves access to
           personalized fitness solutions, regardless of their location or
           schedule. Our virtual gym platform is designed to empower individuals
@@ -64,27 +69,27 @@ const About = () => {
         <p>
           <strong>What sets us apart:</strong>
         </p>
-        <p>
+        <p data-aos = "fade-left">
           Innovative Workouts: Experience the latest trends and innovations in
           the fitness industry with our diverse selection of virtual workout
           classes and routines. From high-intensity interval training (HIIT) to
           yoga and meditation sessions, we have something for everyone.
         </p>
-        <p>
+        <p data-aos = "fade-right">
           Personalized Training Programs: Tailored to your unique fitness level,
           preferences, and goals, our personalized training programs ensure that
           you get the most out of your workout sessions. Our team of certified
           trainers and fitness experts is here to guide you every step of the
           way.
         </p>
-        <p>
+        <p data-aos = "fade-left">
           Flexible Scheduling: Say goodbye to rigid gym schedules and crowded
           workout spaces. With <em>FitTrackHub</em>, you have the flexibility to
           exercise whenever and wherever it suits you best. Whether you prefer
           to sweat it out in the morning or unwind with an evening yoga session,
           the choice is yours.
         </p>
-        <p style={{padding:'15px'}}>
+        <p style={{padding:'15px'}} data-aos = "fade-right">
           <strong>
             At <em>FitTrackHub</em>, your journey to a healthier, happier you
             begins today. Join us and discover the transformative power of

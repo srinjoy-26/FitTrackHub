@@ -2,9 +2,16 @@ import { FaFacebook } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const Footer = () => {
   let fooitem = ["Home", "About", "Contact", "Exercises",'Diet'];
+
+  useEffect(()=>{
+    Aos.init({duration: 1000})
+  },[])
 
   return (
     <div className="bg-black relative pb-0" id="footer">
@@ -12,17 +19,17 @@ const Footer = () => {
         id="footer"
         className="bg-black flex flex-col  md:flex-row md:justify-around py-8 md:items-center"
       >
-        <div className=" p-4 md:py-0">
-          <div className="flex gap-1 items-center">
+        <div className=" p-4 md:py-0" >
+          <div className="flex gap-1 items-center" data-aos = "fade-right">
             <div id="logo" className="h-16 w-16"></div>
             <span className="text-white">FitTrackHub</span>
           </div>
-          <p className="text-slate-200 font-thin mt-2">
+          <p className="text-slate-200 font-thin mt-2" data-aos = "fade-left">
             Our goal is to help you get fit!
           </p>
         </div>
 
-        <div className=" p-4 md:py-0">
+        <div className=" p-4 md:py-0" data-aos = "fade-down">
           <ul>
             {fooitem.map((x, index) => {
               return (
@@ -39,7 +46,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className=" p-4 md:py-0">
+        <div className=" p-4 md:py-0" data-aos = "fade-left">
           <p className="text-slate-200 mt-2 text-md">Get in Touch</p>
           <div className="text-slate-300 flex gap-2 justify-start cursor-pointer mt-1">
             <FaFacebook className="hover:text-lg hover:text-blue-400"></FaFacebook>
