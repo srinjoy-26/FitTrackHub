@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 
+
 export default function Hero() {
   return (
-    <div className=" flex flex-col justify-around items-center bg-gradient-to-t bg-black py-2 px-4 gap-5 h-screen md:flex-row md:px-0 md:gap-1">
+  <>
+    <div className=" flex flex-col justify-around items-center bg-gradient-to-t bg-black py-2 px-4 gap-5 h-screen md:flex-row md:px-0 md:gap-0">
       {/* left section div image*/}
-      <div className="flex flex-col justify-center  gap-4  text-white">
+      <div className="flex flex-col justify-center  gap-8  text-white sm:w-[42%]">
         <h1 className="text-3xl lg:text-5xl tracking-widest inline">
         FIT TRACK HUB <span className="">.</span>
         </h1>
@@ -13,6 +15,7 @@ export default function Hero() {
 
         <p className="text-md">
           Welcome to FitTrackHub , the place where your fitness and muscle-building journey begins.
+          Discover a vast library of professionally curated workouts designed to target every muscle group and fitness objective.
         </p>
 
         <button className="bg-gradient-to-r from-green-400 to-blue-500 rounded-full lg:w-36 p-2 lg:p-3 text-white tracking-widest hover:shadow-lg  hover:shadow-blue-500 w-full">
@@ -25,6 +28,10 @@ export default function Hero() {
       <div className="w-full h-[30rem] rounded-3xl shadow-xl shadow-red-400 sm:w-96" id="hero-img">
        
       </div>
+      
     </div>
+    
+    
+  </>
   );
 }

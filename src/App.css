@@ -42,11 +42,15 @@ font-family: 'Kanit', sans-serif;
 }
 
 .loading{
-  background-image: url(./assets/loader.gif);
+  background-image: url(./assets/loader.png);
   background-position: center;
   background-size: cover;
-  width: 100%;
-  height: 90%;
+ 
+  animation: mymove 1s infinite;
+}
+
+@keyframes mymove {
+  100%{transform: rotate(360deg);}
 }
 
 .loader{
@@ -54,8 +58,9 @@ font-family: 'Kanit', sans-serif;
 }
 
 #hero-img{
-  background-image: url(./assets/builder.jpg);
+  background-image: url(./assets//builder.jpg);
   background-position: center;
   background-size: cover;
-
+  
 }
+
