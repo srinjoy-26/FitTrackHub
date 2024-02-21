@@ -6,13 +6,13 @@ export default function Hero() {
       {/* left section div image*/}
       <div className="flex flex-col justify-center  gap-4  text-white">
         <h1 className="text-3xl lg:text-5xl tracking-widest inline">
-          ENERGIZE ME <span className="">.</span>
+        FIT TRACK HUB <span className="">.</span>
         </h1>
 
         <h2 className="text-xl lg:text-2xl tracking-widest">NO PAIN NO GAIN</h2>
 
         <p className="text-md">
-          Welcome to EnergizeMe , the place where your fitness and muscle-building journey begins.
+          Welcome to FitTrackHub , the place where your fitness and muscle-building journey begins.
         </p>
 
         <button className="bg-gradient-to-r from-green-400 to-blue-500 rounded-full lg:w-36 p-2 lg:p-3 text-white tracking-widest hover:shadow-lg  hover:shadow-blue-500 w-full">
