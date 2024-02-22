@@ -17,7 +17,7 @@ function MainLayout() {
 
 export default function App() {
   return (
-    <div className="App">
+    <div className="App w-full overflow-x-hidden">
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/home" element={<Home />} />
