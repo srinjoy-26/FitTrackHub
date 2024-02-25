@@ -64,3 +64,24 @@ font-family: 'Kanit', sans-serif;
   
 }
 
+#hero-heading{
+  background: linear-gradient( #865DFF , #A31ACB);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+   font-weight: 700;
+   font-size: 6rem;
+}
+
+@media (max-width: 1326px) {
+  #hero-heading{
+    font-size: 4rem;
+  }
+}
+@media (max-width: 1326px) {
+  #hero-heading{
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}

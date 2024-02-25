@@ -12,9 +12,9 @@ function SingleCard({ item }) {
     },[])
 
   return (
-    <Card sx={{ maxWidth: 300,  padding: '10px', borderRadius: '5px' , transition: 'all 0.3s ease-in-out' , background: 'black'}} className="mx-auto  hover:scale-105 cursor-pointer hover:shadow-lg hover:shadow-blue-500" id="card" data-aos = "fade-down">
+    <Card sx={{ maxWidth: 300,  padding: '10px', borderRadius: '5px' , transition: 'all 0.5s ease-in-out' , background: 'black'}} className="mx-auto  cursor-pointer hover:shadow-2xl hover:shadow-blue-500" id="card" data-aos = "fade-down">
 
-      <CardMedia image={value.src} sx={{ height: 170 }} />
+      <CardMedia image={value.src} sx={{ height: 180 }} className="hover:scale-105 ease-in-out duration-500" />
       <CardContent sx={{ color: "white" }}>
         <h2 className="text-lg font-semibold">{value.name}</h2>
         <p className="text-slate-300">
