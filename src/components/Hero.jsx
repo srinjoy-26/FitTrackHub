@@ -23,7 +23,7 @@ export default function Hero() {
           Discover a vast library of professionally curated workouts designed to target every muscle group and fitness objective.
         </p>
 
-        <button className="bg-gradient-to-r from-purple-600 to-blue-500 rounded-full lg:w-36 p-2 lg:p-3 text-white tracking-widest hover:shadow-lg  hover:shadow-blue-500 w-full md:w-[50%] md:mx-auto">
+        <button className="bg-gradient-to-r from-purple-600 to-blue-500 rounded-full lg:w-36 p-2 lg:p-3 text-white tracking-widest hover:shadow-lg  hover:shadow-blue-500 w-full md:w-[50%]">
          <Link to='/exercises'>LEARN MORE</Link> 
         </button>
       </div>
