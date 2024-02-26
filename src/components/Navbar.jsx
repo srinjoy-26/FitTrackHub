@@ -43,7 +43,7 @@ const Navbar = () => {
     <>
       <div className="bg-black flex justify-between items-center py-3 px-4 gap-8 sm:justify-around sm:px-0 w-full" id="nv">
 
-        <div id="logo" className="h-14 w-14" ></div>
+       <NavLink to="/home"><div id="logo" className="h-14 w-14" ></div></NavLink>
       
       
         <div id="items">
