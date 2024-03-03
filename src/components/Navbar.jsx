@@ -87,7 +87,7 @@ const Navbar = () => {
       <div id="side"
         className={`bg-black w-full py-4 px-4 ${
           nvstate && "hidden"
-        } sm:hidden`}
+        } sm:hidden h-screen`}
       >
         <div id="resitems" className="w-full">
           <ul className="flex gap-6 flex-col w-full">
@@ -96,7 +96,7 @@ const Navbar = () => {
                 <NavLink key={index} to={`/${item.toLowerCase()}`}>
                 <li
                   
-                  className="text-md  text-white p-1 rounded-sm cursor-pointer w-[50%] hover:text-purple-400"
+                  className="text-md  text-white p-1 rounded-sm cursor-pointer w-[50%] hover:text-purple-400" onClick={()=>{setstate(true)}}
                 >
                   {item}
                 </li></NavLink>
