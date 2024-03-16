@@ -2,10 +2,10 @@
 function WorkoutSingleCard({data}) {
     
   return (
-    <div className=" w-[21.5rem]  rounded-md overflow-hidden bg-transparent mx-auto sm:w-[18rem] border-2 border-blue-600 ">
+    <div className=" w-full  rounded-md overflow-hidden bg-transparent  sm:w-[18rem] border-2 border-blue-500 ">
 
       <div className="">
-        <img src= {data.gifUrl} alt="Workout Gif"/>
+        <img src= {data.gifUrl} alt="Workout Gif" className="w-full"/>
       </div>
 
       <div className="p-4 text-center">

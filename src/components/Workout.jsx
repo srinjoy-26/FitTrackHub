@@ -46,7 +46,7 @@ function Workout() {
       </div>
       {
       exercises == '' ? <Loader/> :
-      <div className="flex flex-wrap gap-4 sm:gap-2">
+      <div className="flex flex-wrap gap-4 sm:gap-2 justify-center">
         {exercises.map((exercise, index) => (
            <WorkoutSingleCard key={index} data={exercise}/>
         ))}

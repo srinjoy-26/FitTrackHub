@@ -8,7 +8,9 @@ import { SpeedInsights } from "@vercel/speed-insights/react"
 ReactDOM.createRoot(document.getElementById('root')).render(
   
     <Router>
+      <React.StrictMode>
        <App />
+       </React.StrictMode>
     </Router>
    
   
