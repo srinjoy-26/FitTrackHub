@@ -1,9 +1,11 @@
 import { FaEyeSlash } from "react-icons/fa6";
 import {account} from '../lib/appwrite'
-import { useState } from "react";
+import { useState , useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Login = () =>{
@@ -12,6 +14,22 @@ const Login = () =>{
   let [email , setemail] = useState('')
   let [password , setpassword] = useState('')
   let [showloader , setloader] = useState(false)
+  
+ const notify = ()=>toast.info('please Login now', {
+    position: "top-center",
+    autoClose: 1500,
+    theme: "light",
+})
+
+const Loginfail = () => toast.error('Some error occured! please try again.', {
+  position: "top-center",
+  autoClose: 1500,
+  theme: "light",
+});
+
+  useEffect(()=>{
+    notify()
+  },[])
 
   const Navigate = useNavigate()
 
@@ -36,12 +54,14 @@ const Login = () =>{
       
     }catch(e){
       setloader(false)
-      alert('Invalid credentials')
+      Loginfail()
     }
     
   }
 
   return(
+    <>
+    <ToastContainer transition: Bounce/>
     <div className="login bg-black h-screen flex justify-center items-center px-5 relative" >
        { 
          showloader ? <Loader/> : 
@@ -71,6 +91,7 @@ const Login = () =>{
      }
       
     </div>
+    </>
   )
 }
 

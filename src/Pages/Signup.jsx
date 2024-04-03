@@ -3,6 +3,8 @@ import {account} from '../lib/appwrite'
 import { useState } from "react";
 import { useNavigate , Link} from "react-router-dom";
 import Loader from "../components/Loader";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const SignUp = () =>{
@@ -19,10 +21,22 @@ const SignUp = () =>{
     inptype == 'password'? setinptype('text') : setinptype('password')
   }
 
+  const notify = () => toast.error('please fill all the fields', {
+    position: "top-center",
+    autoClose: 1500,
+    theme: "light",
+});
+
+const Signupfail = () => toast.error('Some error occured! please try again.', {
+  position: "top-center",
+  autoClose: 1500,
+  theme: "light",
+});
+
   const handleSubmit= (e) =>{
      e.preventDefault()
      if(name == '' || email == '' || password == ''){
-      alert('please fill all the fields')
+      notify()
      }else{
       Signup();
      }
@@ -35,10 +49,15 @@ const SignUp = () =>{
     Navigate('/home')
    }catch(e){
     console.log(e)
+    setloader(false)
+    Signupfail()
    }
   }
 
   return(
+    <>
+    <ToastContainer transition: Bounce/>
+    
     <div className="SignUp bg-black h-screen flex justify-center items-center px-5 relative" >
 
     { 
@@ -71,6 +90,7 @@ const SignUp = () =>{
       </form>
       </>}
     </div>
+    </>
   )
 }
 

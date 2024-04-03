@@ -6,6 +6,9 @@ import { FiLogIn } from "react-icons/fi";
  import { NavLink , useNavigate } from "react-router-dom";
  import { TbFaceId } from "react-icons/tb";
  import { account } from '../lib/appwrite';
+ import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
  
 
 const Navbar = () => {
@@ -14,10 +17,22 @@ const Navbar = () => {
 
   let nvitem = ["Home", "About", "Contact", "Exercises", "Diet"];
   let Navigate = useNavigate()
-  
+
+  const notify = ()=>toast.success("You're logged in", {
+    position: "top-right",
+    autoClose: 1500,
+    theme: "dark",
+})
+
+const logoutnotify = ()=>toast.success("logged out successfully", {
+  position: "top-right",
+  autoClose: 1500,
+  theme: "dark",
+})
   useEffect(()=>{
   
     isLogin();
+    notify();
   }, [])
 
   const isLogin = async() =>{
@@ -32,7 +47,9 @@ const Navbar = () => {
   const Logout = async() => {
     try{
       var x = await account.deleteSession('current')
+      logoutnotify();
       Navigate('/login')
+      
     }catch(e){
       console.log(e)
     }
@@ -41,6 +58,7 @@ const Navbar = () => {
 
   return (
     <>
+    <ToastContainer transition: Bounce/>
       <div className="bg-black flex justify-between items-center py-3 px-4 gap-8 sm:justify-around sm:px-0 w-full" id="nv">
 
        <NavLink to="/home"><div id="logo" className="h-14 w-14" ></div></NavLink>
